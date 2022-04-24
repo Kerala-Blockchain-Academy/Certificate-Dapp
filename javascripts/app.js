@@ -1,5 +1,5 @@
 function connectToMetMask() {
-    ethereum.enable().then(result => {
+    ethereum.request({ method: 'eth_requestAccounts' }).then(result => {
         console.log("Account: ",result);
     })
 }
